@@ -86,7 +86,7 @@ class MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Savvy',
+      title: 'حفظ حالات الواتساب',
       theme: ThemeData(
         brightness: Brightness.light,
         primaryColor: Colors.teal,
@@ -205,67 +205,29 @@ class MyHome extends StatelessWidget {
               icon: Icon(Icons.share),
               onPressed: () {
                 Share.share(
-                    'check out my wa status downloader https://mastersam.io',
+                    'شارك التطبيق الان',
                     subject: 'Look what I made!');
               }),
-          IconButton(
-              icon: Icon(Icons.help_outline),
-              onPressed: () {
-                showDialog(
-                    context: context,
-                    builder: (BuildContext context) {
-                      return Dialog(
-                        child: Container(
-                          height: 400,
-                          child: Padding(
-                            padding: const EdgeInsets.all(12.0),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Html(data: html),
-                                Expanded(
-                                  child: new Align(
-                                    alignment: Alignment.bottomRight,
-                                    child: FlatButton(
-                                      child: Text(
-                                        'OK!',
-                                        style: TextStyle(color: Colors.green),
-                                      ),
-                                      onPressed: () {
-                                        Navigator.of(context).pop();
-                                      },
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      );
-                    });
-              })
+         
         ],
         bottom: TabBar(tabs: [
           Container(
             height: 30.0,
             child: Text(
-              'IMAGES',
+              'صور',
             ),
           ),
           Container(
             height: 30.0,
             child: Text(
-              'VIDEOS',
+              'فيديوهات',
             ),
           ),
         ]),
       ),
       body: Dashboard(),
       backgroundColor: Colors.white,
-      drawer: Drawer(
-        child: MyNavigationDrawer(),
-      ),
+     
     );
   }
 }

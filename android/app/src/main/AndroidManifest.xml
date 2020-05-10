@@ -12,7 +12,7 @@
 
     <application
         android:name="io.flutter.app.FlutterApplication"
-        android:label="wa_status_saver"
+        android:label="حفظ حالات الواتسابr"
         android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"
